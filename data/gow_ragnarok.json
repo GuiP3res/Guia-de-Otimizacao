@@ -1,0 +1,47 @@
+{
+  "jogo": "God of War Ragnarök",
+  "conquistas": [
+    {
+      "nome": "O Urso e o Lobo",
+      "tipo": "100%",
+      "descricao": "Obtenha todos os troféus."
+    },
+    {
+      "nome": "A Floricultura",
+      "tipo": "colecionavel",
+      "descricao": "Colete uma flor de cada um dos nove reinos.",
+      "itens": [
+        {
+          "regiao": "Midgard",
+          "local": "Bosque do Santuário",
+          "descricao": "Flor perto da casa de Freya."
+        },
+        {
+          "regiao": "Alfheim",
+          "local": "As Areias Proibidas",
+          "descricao": "Flor no deserto após a tempestade."
+        }
+      ]
+    },
+    {
+      "nome": "Invasor de Túmulos",
+      "tipo": "colecionavel",
+      "descricao": "Encontre todos os tesouros de Midgard."
+    },
+    {
+      "nome": "Dívida de Sangue",
+      "tipo": "historia",
+      "descricao": "Enfrente o Deus do Trovão."
+    },
+    {
+      "nome": "Caminhos Separados",
+      "tipo": "historia",
+      "descricao": "Enfrente o Pai de Todos."
+    },
+    {
+      "nome": "O Curador",
+      "tipo": "colecionavel",
+      "descricao": "Recupere todos os Poemas de Kvasir."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "jogo": "Red Dead Redemption 2",
+  "conquistas": [
+    {
+      "nome": "Lenda do Oeste",
+      "tipo": "100%",
+      "descricao": "Complete 100% do jogo e torne-se a lenda definitiva."
+    },
+    {
+      "nome": "Na Lama Outra Vez",
+      "tipo": "historia",
+      "descricao": "Conclua o Capítulo 1."
+    },
+    {
+      "nome": "Só um Arranhão",
+      "tipo": "historia",
+      "descricao": "Conclua 'Assombrado por uma Lembrança'."
+    },
+    {
+      "nome": "Zoologista",
+      "tipo": "colecionavel",
+      "descricao": "Estude todos os animais em todos os estados.",
+      "itens": [
+        {
+          "regiao": "Ambarino",
+          "local": "Grizzlies East",
+          "descricao": "Procure pelo Urso Cinzento e Alces."
+        },
+        {
+          "regiao": "Lemoyne",
+          "local": "Bayou Nwa",
+          "descricao": "Jacarés americanos e Garças são comuns aqui."
+        }
+      ]
+    },
+    {
+      "nome": "Redenção",
+      "tipo": "historia",
+      "descricao": "Conclua 'Sangue, Morte e Redenção'."
+    },
+    {
+      "nome": "Amigo de Verão",
+      "tipo": "colecionavel",
+      "descricao": "Complete uma atividade com um companheiro em cada acampamento."
+    }
+  ]
+}

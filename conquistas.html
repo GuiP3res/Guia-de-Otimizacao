@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquistas - Guia de Jogos e Otimização</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .conquista-card {
+            background: #2a2a2a;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #e74c3c;
+        }
+        .conquista-card h3 {
+            margin-top: 0;
+            color: #fff;
+        }
+        .conquista-card p {
+            color: #ccc;
+        }
+        .conquista-tipo {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            background: #444;
+        }
+        .tipo-100 { border-left-color: #f1c40f; }
+        .tipo-historia { border-left-color: #3498db; }
+        .tipo-colecionavel { border-left-color: #2ecc71; }
+        
+        .item-detalhe {
+            margin-left: 20px;
+            padding: 5px;
+            border-bottom: 1px solid #444;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #e74c3c;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Guia de Jogos e Otimização</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="spider-man-2.html">Marvel's Spider-Man 2</a>
+            <a href="red-dead-2.html">Red Dead Redemption 2</a>
+            <a href="cyberpunk-2077.html">Cyberpunk 2077</a>
+            <a href="god-of-war.html">God of War Ragnarök</a>
+            <a href="ea-fc-25.html">EA Sports FC 25</a>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-link">← Voltar ao Início</a>
+        <h2 id="titulo-jogo">Carregando...</h2>
+        <div id="conquistas-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Guia de Jogos e Otimização</p>
+    </footer>
+
+    <script>
+        async function carregarConquistas() {
+            const params = new URLSearchParams(window.location.search);
+            const jogo = params.get("jogo");
+            
+            const mapping = {
+                'rdr2': 'data/rdr2.json',
+                'gow': 'data/gow_ragnarok.json',
+                'spiderman': 'data/spiderman2.json',
+                'cyberpunk': 'data/cyberpunk.json'
+            };
+
+            const arquivo = mapping[jogo];
+            if (!arquivo) {
+                document.getElementById("titulo-jogo").innerText = "Jogo não encontrado";
+                return;
+            }
+
+            try {
+                const res = await fetch(arquivo);
+                if (!res.ok) throw new Error(`Não foi possível carregar os dados (Status: ${res.status})`);
+                const data = await res.json();
+                
+                document.getElementById("titulo-jogo").innerText = "Conquistas: " + data.jogo;
+                const container = document.getElementById("conquistas-container");
+
+                data.conquistas.forEach(c => {
+                    const div = document.createElement("div");
+                    div.className = `conquista-card tipo-${c.tipo}`;
+                    
+                    let html = `
+                        <span class="conquista-tipo">${c.tipo}</span>
+                        <h3>${c.nome}</h3>
+                        <p>${c.descricao}</p>
+                    `;
+
+                    if (c.itens && c.itens.length > 0) {
+                        html += "<h4>Itens Necessários:</h4>";
+                        c.itens.forEach(item => {
+                            html += `
+                                <div class="item-detalhe">
+                                    <strong>${item.regiao}</strong> - ${item.local}<br>
+                                    <small>${item.descricao}</small>
+                                </div>
+                            `;
+                        });
+                    }
+
+                    div.innerHTML = html;
+                    container.appendChild(div);
+                });
+            } catch (e) {
+                console.error(e);
+                document.getElementById("titulo-jogo").innerText = "Erro ao carregar conquistas. Certifique-se de que o site está sendo servido por um servidor (como GitHub Pages) e não aberto diretamente como arquivo.";
+            }
+        }
+        carregarConquistas();
+    </script>
+</body>
+</html>

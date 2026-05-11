@@ -1,0 +1,47 @@
+{
+  "jogo": "Cyberpunk 2077",
+  "conquistas": [
+    {
+      "nome": "Lenda de Night City",
+      "tipo": "100%",
+      "descricao": "Obtenha todas as conquistas."
+    },
+    {
+      "nome": "O Louco",
+      "tipo": "historia",
+      "descricao": "Torne-se um mercenário."
+    },
+    {
+      "nome": "Os Enamorados",
+      "tipo": "historia",
+      "descricao": "Roube o Relic."
+    },
+    {
+      "nome": "O Eremita",
+      "tipo": "historia",
+      "descricao": "Encontre Alt Cunningham."
+    },
+    {
+      "nome": "BUM, BUM, BUM!",
+      "tipo": "colecionavel",
+      "descricao": "Obtenha todas as armas icônicas.",
+      "itens": [
+        {
+          "regiao": "Watson",
+          "local": "Apartamento de V",
+          "descricao": "Dying Night - recompensa de Wilson."
+        },
+        {
+          "regiao": "Badlands",
+          "local": "Acampamento Aldecaldos",
+          "descricao": "Overwatch - dada por Panam."
+        }
+      ]
+    },
+    {
+      "nome": "It's Elementary",
+      "tipo": "100%",
+      "descricao": "Conclua todos os serviços e crimes em Watson."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "jogo": "Marvel's Spider-Man 2",
+  "conquistas": [
+    {
+      "nome": "Diligente",
+      "tipo": "100%",
+      "descricao": "Obtenha todos os Troféus do jogo."
+    },
+    {
+      "nome": "Superior",
+      "tipo": "100%",
+      "descricao": "Conclua todos os distritos 100%."
+    },
+    {
+      "nome": "Curando o Mundo",
+      "tipo": "historia",
+      "descricao": "Conclua a História Principal."
+    },
+    {
+      "nome": "Grãos de Areia",
+      "tipo": "colecionavel",
+      "descricao": "Junte todas as memórias quebradas de Marko.",
+      "itens": [
+        {
+          "regiao": "Financial District",
+          "local": "Centro",
+          "descricao": "Primeiro cristal encontrado durante a introdução."
+        },
+        {
+          "regiao": "Downtown Brooklyn",
+          "local": "Parque",
+          "descricao": "Cristal escondido perto da orla."
+        }
+      ]
+    },
+    {
+      "nome": "Exterminador",
+      "tipo": "colecionavel",
+      "descricao": "Conclua todos os Ninhos de Simbionte."
+    },
+    {
+      "nome": "Um Novo Traje",
+      "tipo": "historia",
+      "descricao": "Adquira o Traje Preto."
+    }
+  ]
+}
